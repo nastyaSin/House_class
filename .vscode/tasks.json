@@ -3,16 +3,17 @@
     {
       "type": "cppbuild",
       "label": "cppbuild",
-      "command": "C:\\msys64\\mingw64\\bin\\g++.exe", 
+      "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
       "args": [
+        "-Iinclude",
+        "${workspaceFolder}\\src\\*.cpp",
         "-fdiagnostics-color=always",
         "-g",
-        "*.cpp",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        "${workspaceFolder}\\build\\${workspaceFolderBasename}.exe"
       ],
       "options": {
-        "cwd": "${fileDirname}"
+        "cwd": "${workspaceFolder}"
       },
       "problemMatcher": ["$gcc"],
       "group": {
